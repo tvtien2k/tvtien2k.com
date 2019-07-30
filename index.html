@@ -1,56 +1,405 @@
 <!DOCTYPE html>
-<html >
+<html lang="en" class="no-js">
     <head>
-        <meta charset="UTF-8">
-        <title>Tic Tac Toe | By TVT</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>CV Tien Tran</title>
+        <meta name="description" content="Eric - CV / Resume / Personal Website Template by Hencework" />
+        <meta name="keywords" content="eric, responsive resume template, cv template, multipurpose, responsive template, vcard, html5 template, templatemonster, bootstrap, html5, creative, landing page, sass, clean, design, modern, angular js" />
+        <meta name="author" content="Hencework"/>
 
+        <!--Favicon-->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+        <!--Fonts - changed to Source Code Pro-->
+        <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' rel='stylesheet' type='text/css'>
 
-        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-        <link rel='stylesheet prefetch' href='https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css'>
-
-        <link rel="stylesheet" href="style.css">
-
-
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
 
-    <body>
-        <div id="main">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-4 cell" id="c11">
-                    </div>
-                    <div class="col-xs-4 cell" id="c12">
-                    </div>
-                    <div class="col-xs-4 cell" id="c13">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4 cell" id="c21">
-                    </div>
-                    <div class="col-xs-4 cell" id="c22">
-                    </div>
-                    <div class="col-xs-4 cell" id="c23">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-4 cell" id="c31">
-                    </div>
-                    <div class="col-xs-4 cell" id="c32">
-                    </div>
-                    <div class="col-xs-4 cell" id="c33">
-                    </div>
-                </div>
-            </div>
+    <body id="body" data-ng-app="contactApp">
+
+        <!--Fixed Bg Image-->
+        <div class="fixed-bg"></div>
+        <div class="fixed-bg-overlay"></div>
+        <!--/Fixed Bg Image-->
+
+        <!--Preloader-->
+        <div id="pre_load" class="preloader-it">
+            <div id="la_anim" class="la-anim-1"></div>
         </div>
+        <!--/Preloader-->
 
-        <div id="dialog-confirm" title="Tic Tac Toe | By TVT">
-            <p>Chọn X hay O đây?</p>
+        <!--Container-->
+        <div class="container-fluid">
+            <div class="row">
+                <div id="vertical_nav_wrap" class="col-lg-4 col-xs-12 pad-zero vertical-nav-wrap">
+
+                    <!--Navigation-->
+                    <nav class="navbar navbar-default vertical-nav" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="btn btn-default navbar-toggle" data-toggle="collapse" 
+                                    data-target="#navbar_collapse">
+                                <span class="mask"></span>
+                                <span class="btn-label">
+                                    <span class="pe-7s-menu"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbar_collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a data-scroll href="#body"></a><span>Introduce</span></li>
+                                <li><a data-scroll href="#skill_sec"></a><span>Skills</span></li>
+                                <li><a data-scroll href="#edu_sec"></a><span>Edu</span></li>
+                                <li><a data-scroll href="#work_sec"></a><span>Activities</span></li>
+                                <li><a data-scroll href="#contact_sec"></a><span>Liên hệ</span></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/Navigation-->
+
+                </div>
+
+                <div class="col-lg-8 col-xs-12 pad-zero">
+
+                    <!--Header-->
+                    <header>
+                        <div class="header-wrap col-lg-10 center-div">
+                            <div class="float-left name">
+                                <a data-scroll href="#body">
+                                    <span>
+                                        Home
+                                    </span>
+                                </a>	
+                            </div>	
+
+                            <div class="float-right social-download-wrap">
+                                <a href="#" class="btn btn-default float-left">
+                                    <span class="mask"></span>
+                                    <span class="btn-label">
+                                        <b>Download CV</b>
+                                        <span class="icon pe-7s-download"></span>
+                                    </span>
+                                </a>
+                            </div>	
+                        </div>
+                        <div class="clearfix"></div>
+                    </header>
+                    <!--/Header-->
+
+                    <!--Main Content-->
+                    <div id="main_content" class="content-block margin-top-150 margin-top-sm-70 margin-top-xs-50">
+
+                        <!--Introduction Sec-->
+                        <section id="intro_content_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div intro-content-wrap sec-pad">
+                            <div class="person-img margin-bottom-xs"></div>
+                            <h1>
+                                Xin chào!<span id="typed"></span>
+                            </h1>
+                            <h6>
+                                Giới thiệu
+                            </h6>
+                            <p class="pad-bottom-35 wow fadeInUp" data-wow-duration=".6s">
+                                Hiện tại, mình đang là sinh viên <a href="http://btec.fpt.edu.vn/" class="goto-social" target="_blank">Trường CĐ BTEC FPT,</a> theo học Chuyên ngành <a class="goto-social" target="_blank">Công nghệ thông tin.</a>
+                            </p>
+                            <p class="pad-bottom-35 wow fadeInUp" data-wow-duration=".6s">
+                                Là một người yêu thích công nghệ, mình có sở thích vọc vạch, tìm hiểu một số thứ (vân vân và mây mây các thứ về lập trình) trên Internet (bởi vì không ai đánh thuế về việc search google mà -.-).
+                            </p>
+                            <p class="wow fadeInUp" data-wow-duration=".4s">
+                                À à, bạn cũng có thể ghé qua <a class="goto-social" href="https://github.com/tvtien2k" target="_blank">Github</a> để xem qua 1 số <a class="goto-social" target="_blank">Project</a> của mình nha (vì kinh nghiệm không nhiều nên có thể hơi khoai).
+                            </p>
+                        </section>
+                        <!--/Introduction Sec-->
+
+                        <hr class="separater-hr"/>
+
+                        <!--Skills Sec-->
+                        <section id="skill_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div skills-wrap  sec-pad-top sec-pad-bottom-xs">
+                            <h6>Kỹ năng mềm</h6>
+                            <p class="wow fadeInUp" data-wow-duration=".4s">
+                                Theo cảm nhận của chính cá nhân mình và cũng như những người xung quanh mình nhận xét thì mình xin mạnh dạn tự chấm điểm cho bản thân như sau (cái này thì tương đối thôi, không hoàn toàn chính xác 100% nha):
+                            </p>
+                            <div class="row margin-top-40">
+                                <div class="col-sm-5 margin-bottom-sm">
+                                    <span class="progress-cat">Teamwork</span>
+                                    <div class="progress-bar-graph"> 
+                                        <div class="progress-bar-wrap">
+                                            <div class="bar-wrap">
+                                                <span data-width="70">
+                                                    <strong><i>70</i>%</strong>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-offset-1 col-sm-5 margin-bottom-sm">
+                                    <span class="progress-cat">English</span>
+                                    <div class="progress-bar-graph"> 
+                                        <div class="progress-bar-wrap">
+                                            <div class="bar-wrap">
+                                                <span data-width="50">
+                                                    <strong><i>50</i>%</strong>
+                                                </span>
+                                            </div>
+                                        </div>	
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </section>
+                        <!--/Skills Sec-->
+
+                        <hr class="separater-hr"/>
+
+                        <!--Experience Sec-->
+                        <section id="exp_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div experience-wrap  sec-pad">
+                            <h6>Chuyên ngành</h6>
+                            <div class="exp-timeline-wrap">
+                                <div class="row exp-timeline timeline-active">
+                                    <div class="col-xs-2">
+                                        <div class="timeline-st"></div>
+                                    </div>
+                                    <div class="col-xs-10 exp-content-wrap">
+                                        <div class="row">
+                                            <div class="wow fadeInRight" data-wow-duration=".4s" data-wow-delay="0s">
+                                                <div class="col-sm-3 duration"><span>Web</span></div>
+                                                <div class="col-sm-9">
+                                                    <p class="job-summary p-small">Hiểu biết cơ bản về Web, có kiến thức cơ bản về HTML, CSS, JS, PHP và một số Framework thường dùng. Biết sơ qua về MySQL.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row exp-timeline">
+                                    <div class="col-xs-2">
+                                        <div class="timeline-st"></div>
+                                    </div>
+                                    <div class="col-xs-10 exp-content-wrap">
+                                        <div class="row">
+                                            <div class="wow fadeInRight" data-wow-duration=".4s" data-wow-delay="0.2s">
+                                                <div class="col-sm-3 duration"><span>App</span></div>
+                                                <div class="col-sm-9">
+                                                    <p class="job-summary p-small">Có hiểu biết cơ bản về C#, Winform, MS SQL Sever. Có khả năng xây dựng các app quản lý cơ bản.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row exp-timeline">
+                                    <div class="col-xs-2">
+                                        <div class="timeline-st"></div>
+                                    </div>
+                                    <div class="col-xs-10 exp-content-wrap">
+                                        <div class="row">
+                                            <div class="wow fadeInRight" data-wow-duration=".4s" data-wow-delay="0.4s">
+                                                <div class="col-sm-3 duration"><span>Network</span></div>
+                                                <div class="col-sm-9">
+                                                    <p class="job-summary p-small">Cái này thì chỉ biết sơ qua thôi.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!--/Experience Sec-->
+
+                        <hr class="separater-hr"/>
+
+                        <!--Qualfication Sec-->
+                        <section id="edu_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div education-wrap  sec-pad">
+                            <h6>Học tập</h6>
+                            <p class="wow fadeInUp" data-wow-duration=".4s">
+                                Cùng với sự yêu thích công nghệ, mình đã bắt đầu theo đuổi ước mơ tại trường Trường CĐ BTEC FPT, bên cạnh đó mình còn tham gia một số khóa học (online và học trực tiếp tại trung tâm) cũng như tự tìm tòi để nâng cao kiến thức chuyên ngành của mình (mình thấy việc tự học vẫn là quan trọng nhất).
+                            </p>
+                            <div class="qualfication-wrap">
+                                <div class="qualfication first-row wow fadeInUp" data-wow-duration=".4s">
+                                    <div class="col-sm-1">
+                                        <span class="row-count"><span>1</span></span>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <span class="yr-pers vertical-align-pad">2018 - Hiện tại</span>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <span class="insti vertical-align-pad">BTEC FPT</span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="vertical-align-pad">
+                                            Theo học tại trường CĐ BTEC FPT từ tháng 7 năm 2018. Từng tham gia cuộc thi olympic tin học sinh viên Việt Nam 2018. Hiện tại vẫn đang là sinh viên chuyên ngành CNTT tại trường.
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="qualfication wow fadeInUp" data-wow-duration=".4s">
+                                    <div class="col-sm-1">
+                                        <span class="row-count"><span>2</span></span>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <span class="yr-pers vertical-align-pad">2015 - 2018</span>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <span class="insti vertical-align-pad">THPT</span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="vertical-align-pad">
+                                            Thời gian này thì không có cái gì để "chém" cả -.-
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <!--/Qualfication Sec-->
+
+                        <hr class="separater-hr"/>
+
+                        <!--Work Sec-->
+                        <section id="work_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div skills-wrap  sec-pad">
+                            <h6>Hoạt động</h6>
+
+                            <div id="portfolio-wrap" class="padding-sec-lg">
+                                <ul id="portfolio" class="auto-construct  project-gallery" data-col="2">
+                                    <li  class="item"   data-src="img/mock1.jpg" data-sub-html="<p>Các hoạt động của trường</p>" >
+                                        <a href="">
+                                            <img class="img-responsive" src="img/mock1.jpg"  alt="Image description" />
+                                            <span class="hover-cap">BTEC FPT</span>
+                                        </a>
+                                    </li>
+                                    <li  class="item"   data-src="img/mock2.jpg" data-sub-html="<p>Giấy chứng nhận sinh viên xuất sắc.</p>" >
+                                        <a href="">
+                                            <img class="img-responsive" src="img/mock2.jpg"  alt="Image description" />
+                                            <span class="hover-cap">BTEC FPT</span>
+                                        </a>
+                                    </li>
+                                    <li class="item" data-src="img/mock3.jpg" data-sub-html="<p>Cuộc thi olympic tin học sinh viên Việt Nam 2018</p>">
+                                        <a href="">
+                                            <img class="img-responsive" src="img/mock3.jpg"  alt="Image description" />
+                                            <span class="hover-cap">OLYMPIC TIN HỌC</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <!-- Hidden video div -->
+                                <div style="display:none;" id="video1">
+                                    <video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+                                        <source src="videos/video1.mp4" type="video/webm">
+                                        <source src="videos/video1.webm" type="video/webm">
+                                        Your browser does not support HTML5 video.
+                                    </video>
+                                </div>
+                            </div>
+                        </section>
+                        <!--/Work Sec-->
+
+                        <hr class="separater-hr"/>
+
+                        <!--Contact Sec-->
+                        <section id="contact_sec"  class="col-lg-10 col-md-11 col-sm-11 center-div contact-wrap  sec-pad-top sec-pad-bottom-sm">
+                            <h6>Liên hệ</h6>
+                            <div data-ng-controller="ContactController" class="align-center wow fadeInUp" data-wow-duration=".4s">
+                                <h3>Hello <span  data-ng-bind="formData.inputName||'friend'"></span>, rất vui khi bạn liên hệ.</h3>
+                                <div>
+                                    <form data-ng-submit="submit(contactform, $event)"  name="contactform"  method="post" class="row form-horizontal" role="form">
+                                        <div class="form-group input--hoshi col-sm-6" data-ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+                                            <div class="input-wrap">
+                                                <input autocomplete="off" data-ng-model="formData.inputName" type="text" class="form-control input__field input input__field--hoshi" id="inputName" name="inputName" placeholder="Name" required>
+                                                <label class="input__label input__label input__label--hoshi input__label--hoshi-color-1 input__label--hoshi input__label--hoshi-color-1" ></label>
+                                            </div>	
+                                        </div>
+                                        <div class="form-group  input--hoshi col-sm-6" data-ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+                                            <div class="input-wrap">
+                                                <input autocomplete="off" data-ng-model="formData.inputEmail" type="email" class="form-control input input__field input__field--hoshi" placeholder="Email" id="inputEmail" name="inputEmail" required>
+                                                <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                            </div>	
+                                        </div>
+                                        <div class="form-group  input--hoshi col-sm-12" data-ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+                                            <div class="input-wrap">
+                                                <textarea data-ng-model="formData.inputMessage" class="form-control input input__field input__field--hoshi" rows="4" id="inputMessage" name="inputMessage" placeholder="message" required></textarea>
+                                                <label class="input__label input__label--hoshi input__label--hoshi-color-1"></label>
+                                            </div>	
+                                        </div>
+                                        <div class="form-group col-sm-12">
+                                            <div class="align-center">
+                                                <button type="submit" class="btn btn-default" data-ng-disabled="submitButtonDisabled">
+                                                    <span class="mask"></span>
+                                                    <span>send message</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <p data-ng-class="result">{{ resultMessage }}</p>
+                                </div>
+                            </div>
+
+                            <div class="email-direct">
+                                <p class="wow fadeInRight" data-wow-duration=".4s">Hoặc bạn có thể gửi trực tiếp qua <a href="mailto:xyz@example.com">tvtien2k@gmail.com</a></p>
+                            </div>
+                        </section>
+                        <!--Contact Sec-->
+
+                        <hr class="separater-hr"/>
+
+                        <!--Footer-->
+                        <footer class="col-lg-10 col-md-11 col-sm-11 center-div contact-wrap  sec-pad">
+                            <div class="row">
+                                <div class="col-sm-6 available-wrap">
+                                    <span class="available-pointer"></span>
+                                    <span class="available-tag">Cảm ơn đã ghé thăm.</span>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="social-icons-wrap float-right">
+                                        <!--Social Icons-->
+                                        <ul class="social-icons float-right">
+                                            <li>
+                                                <a href="https://www.facebook.com/tvtien11" class="social-icon">
+                                                    <span class="fa" data-hover="&#xf09a;">&#xf09a;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!--/Social Icons-->
+                                    </div>
+                                    <div class="goto-top text-right float-right">
+                                        <a data-scroll href="#body">
+                                            <span data-hover="top">
+                                                top
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="copywrite-wrap text-right float-right">
+                                        <p class="copywrite">Fabricated by <b>Hencework &copy; 2017. </b>Edit by <b>Tien Tran </b>in 2019.</p>
+                                    </div>
+                                </div>	
+                            </div>	
+                        </footer>
+                        <!--/Footer-->
+
+                    </div>	
+                    <!--/Main Content-->
+
+                </div>
+            </div>	
         </div>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script src='https://code.jquery.com/ui/1.11.4/jquery-ui.js'></script>
+        <!-- /Container -->
 
-        <script src="function.js"></script>
-
+        <!-- Scripts -->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/angular.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/modernizr.custom.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/jquery.placeholder.js"></script>
+        <script src="js/smooth-scroll.js"></script>
+        <script src="js/countTo.js"></script>
+        <script src="js/jQuery.appear.js"></script>
+        <script src="js/isotope.js"></script>
+        <script src="js/typed.js"></script>
+        <script src="js/lightgallery-all.js"></script>
+        <script src="js/jquery.mousewheel.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/froogaloop2.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/init.js"></script>
     </body>
 </html>
